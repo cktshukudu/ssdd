@@ -1,0 +1,28 @@
+{% extends 'Home.html' %}
+{% block content %}
+<table class="table text-bg-success p-3">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">ID/DOB</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Survey ID</th>
+            <th scope="col">GeoLocation</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for i in data %}
+        <tr>
+            <th scope="row">{{i.ID_Number}}</th>
+            <td>{{ i.Name }}</td>
+            <td>{{ i.Surname }}</td>
+            <td>{{i.Survey_ID}}</td>
+            <td>{{i.GPS_Location}}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock content %}

@@ -1,0 +1,46 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<body>
+      <div class="responsive">
+
+        
+        <form action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="container">
+                <label for="">Email Address:</label>
+                <input type="email" class="form-control" id="email" name="email" required/>
+       
+       
+                <label for="">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required/>
+
+                <div class="container" style="background-color:#ffff">
+                  <button  class="signup_button">Sign Up</button><br>
+             
+                  <br>
+    
+                  <br>
+             
+                  <small class="text-muted ml-3" >Already have an account? <a href="/">Sign In</a></small>
+            
+            </form>
+            </div>
+            </div>
+     
+  
+        <div class="header">
+        </div>
+        <footer class="footer-cop">
+          <div class="container-fluid">
+             <div class="row">
+         <div class="col-md-12">
+         <p> &copy; 2022 All rights reserved. UJ Survey</a></p>
+          </div>
+      </div>
+          </div>
+          </footer>
+      
+    
+        {% endblock %}
+    </body>
+    </html>

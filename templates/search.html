@@ -1,0 +1,43 @@
+{% extends 'Home.html' %}
+{% block content %}
+
+{% if searched %}
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">Survey Name</th>
+            <th scope="col">Survey ID</th>
+            <th scope="col">Question</th>
+            <th scope="col">Response</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">ID Number</th>
+            <th scope="col">GeoLocation</th>
+    
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for i in results %}
+        <tr>
+            <th scope="row">{{i.SurveyName}}</th>
+            <td>{{ i.Survey_ID}}</td>
+            <td>{{ i.Question_Text }}</td>
+            <td>{{ i.Response }}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Surname}}</td>
+            <td>{{i.ID_Number}}</td>
+            <td>{{i.GPS_Location}}</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+{% else %}
+
+<h3>Invalid Search</h3>
+{% endif %}
+
+
+{% endblock content %}

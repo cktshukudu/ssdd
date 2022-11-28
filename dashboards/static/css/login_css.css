@@ -1,0 +1,160 @@
+body{
+    background: #f1f1f1;
+    font-family: Lato, Helvetica, Arial, sans-serif;  
+  }   
+  .signin_button
+  {
+  background-color: #D95900;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 40px;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.5s;
+  }
+  .signup_button
+  {
+  background-color: #D95900;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all 0.5s;
+  }
+  .header {
+  margin-bottom: 110px;
+  padding: 30px;
+  width: 100%;
+  overflow: auto;
+  }
+  .signup{
+    margin: auto;
+    width: 50%;
+    padding: 2px;
+    border-radius: 5px 10px;
+  }
+  form {
+    border: 1px solid #fff;
+    margin: auto;
+    width: 50%;
+    padding: 2px;
+    box-shadow: 5px 10px #D95900;
+    border-radius: 5px 10px;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #fafafa;
+    box-sizing: border-box;
+  }
+  .container {
+    padding: 16px;
+  }
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  @media (min-width:720px){
+  responsive{
+    width: 80%;
+    margin: auto;
+    background: #D95900;
+  }
+  }
+  .footer-cop {
+  background: #000; 
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    padding:40px 0px;
+  } 
+  
+  
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }
+  .navbar {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 5px solid #fff;
+  }
+  .navbar-toggler-icon {
+    background-color: #000;
+  }
+  .topbar{
+  background-color: #D95900;
+  padding: 0;
+  }
+  ul.main-website li {
+    display:inline;
+    margin: 0 5px;
+    padding: 5px 0 0;
+    width: 32px;
+    display: inline-block;
+    text-align: center;
+    height: 32px;
+    vertical-align: baseline;
+  }
+  
+  ul.main-website {
+  list-style: none;
+  margin: 5px 0 10px -25px;
+  float: right;
+  }
+  
+  .waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: .3s ease-out;
+    color: #fff;
+  }
+  a {
+  color: #0a0a0a;
+  text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  navbar-toggler-icon{
+  background-color: #D95900;
+  }
+  .navbar-collapse {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #D95900;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  }
+  
