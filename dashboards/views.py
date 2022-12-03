@@ -131,7 +131,7 @@ def Protection(request):
                         Survey ON Responses.Survey_ID = Survey.Survey_ID INNER JOIN \
                         Respondent ON Responses.NewGUID = Respondent.NewGUID INNER JOIN \
                         Questions ON Responses.Question_ID = Questions.Question_ID \
-                        WHERE (Question_Text = @QUESTION1 AND Response = 'Yes' )) AS table_1 INNER JOIN \
+                        WHERE (Question_Text = @QUESTION1 AND Response = 'Yes' or Response = 'No' )) AS table_1 INNER JOIN \
                         (SELECT Survey.SurveyName, Questions.Question_Text, Responses.Response, Respondent.Name, Respondent.Surname, Respondent.ID_Number, Respondent.GPS_Location  \
                         FROM  Responses INNER JOIN \
                         Survey ON Responses.Survey_ID = Survey.Survey_ID INNER JOIN \
@@ -144,9 +144,9 @@ def Protection(request):
                         Survey ON Responses.Survey_ID = Survey.Survey_ID INNER JOIN\
                         Respondent ON Responses.NewGUID = Respondent.NewGUID INNER JOIN\
                         Questions ON Responses.Question_ID = Questions.Question_ID\
-                        WHERE (Question_Text = @QUESTION3 AND Response = 'No' )) AS table_3\
+                        WHERE (Question_Text = @QUESTION3 AND Response = 'No' or Response = 'No' )) AS table_3\
                         ON  table_1.ID_Number = table_3.ID_Number\
-                        ORDER BY table_1.Name")
+                        ORDER BY table_1.Survey_ID DESC")
     rows = dictfetchall(cursor)  #Fetch the data from your db to be used by the program - use the fetchall() method
    # connection.close()
     return render(request, 'index.html',{'data':rows})   
